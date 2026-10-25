@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order confirmed — ZedSitolo</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="brand-link">
+          <img src="/images/ZedSitolo.png" alt="ZedSitolo" class="logo-img" />
+          <span class="logo">Zed<span>Sitolo</span></span>
+        </a>
+        <nav class="nav-main" aria-label="Main">
+          <div data-role-nav></div>
+          <a href="/cart.html" class="cart-link">
+            Cart
+            <span class="cart-badge" data-cart-count hidden>0</span>
+          </a>
+          <div data-auth-nav></div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div id="order-alert"></div>
+      <div id="order-success-content">
+        <p class="loading-state">Loading order…</p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> ZedSitolo</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/order-success.js"></script>
+  </body>
+</html>

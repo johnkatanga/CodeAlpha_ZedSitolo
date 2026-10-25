@@ -1,0 +1,20 @@
+{
+  "name": "zedsitolo",
+  "version": "1.0.0",
+  "description": "ZedSitolo — full-stack e-commerce marketplace",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "multer": "^1.4.5-lts.1",
+    "sql.js": "^1.12.0"
+  }
+}

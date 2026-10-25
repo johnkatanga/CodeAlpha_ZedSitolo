@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register — ZedSitolo</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="brand-link">
+          <img src="/images/ZedSitolo.png" alt="ZedSitolo" class="logo-img" />
+          <span class="logo">Zed<span>Sitolo</span></span>
+        </a>
+        <nav class="nav-main" aria-label="Main">
+          <div data-role-nav></div>
+          <a href="/cart.html" class="cart-link">
+            Cart
+            <span class="cart-badge" data-cart-count hidden>0</span>
+          </a>
+          <div data-auth-nav></div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container auth-page">
+      <div class="card">
+        <h1>Create account</h1>
+        <p>Register as a buyer or seller (supplier) on the marketplace.</p>
+        <div id="register-alert"></div>
+        <form id="register-form">
+          <div class="form-field">
+            <label for="role">Account type</label>
+            <select id="role" name="role" required>
+              <option value="buyer">Buyer</option>
+              <option value="seller">Seller (Supplier)</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required minlength="3" autocomplete="username" />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+          <div class="form-field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="6" autocomplete="new-password" />
+          </div>
+          <div id="seller-fields" hidden>
+            <div class="form-field">
+              <label for="phone">Phone contact</label>
+              <input type="tel" id="phone" name="phone" placeholder="+260 …" />
+            </div>
+            <div class="form-field">
+              <label for="location">Business / physical location</label>
+              <input type="text" id="location" name="location" placeholder="City, street, province" />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Register</button>
+        </form>
+        <p style="margin-top: 1rem;">Already have an account? <a href="/login.html">Log in</a></p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> ZedSitolo</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/auth-pages.js"></script>
+  </body>
+</html>

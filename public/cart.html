@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart — ZedSitolo</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="brand-link">
+          <img src="/images/ZedSitolo.png" alt="ZedSitolo" class="logo-img" />
+          <span class="logo">Zed<span>Sitolo</span></span>
+        </a>
+        <nav class="nav-main" aria-label="Main">
+          <div data-role-nav></div>
+          <a href="/cart.html" class="cart-link">
+            Cart
+            <span class="cart-badge" data-cart-count hidden>0</span>
+          </a>
+          <div data-auth-nav></div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="page-title">
+        <h1>Your cart</h1>
+      </div>
+      <div id="cart-alert"></div>
+
+      <div class="cart-layout">
+        <section class="card" id="cart-items" aria-live="polite"></section>
+        <aside class="card cart-summary">
+          <h2>Summary</h2>
+          <p>Subtotal: <strong id="cart-subtotal">ZMW 0.00</strong></p>
+          <p class="muted-note" style="color: var(--muted); font-size: 0.9rem;">Shipping calculated at checkout.</p>
+          <a href="/checkout.html" class="btn btn-primary" id="checkout-link" style="width: 100%; margin-top: 1rem;">Proceed to checkout</a>
+          <a href="/" class="btn btn-ghost" style="width: 100%; margin-top: 0.5rem;">Continue shopping</a>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> ZedSitolo</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/cart.js"></script>
+  </body>
+</html>

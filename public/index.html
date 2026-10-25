@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZedSitolo — Shop</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="brand-link">
+          <img src="/images/ZedSitolo.png" alt="ZedSitolo" class="logo-img" />
+          <span class="logo">Zed<span>Sitolo</span></span>
+        </a>
+        <nav class="nav-main" aria-label="Main">
+          <div data-role-nav></div>
+          <a href="/cart.html" class="cart-link">
+            Cart
+            <span class="cart-badge" data-cart-count hidden>0</span>
+          </a>
+          <div data-auth-nav></div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Multi-vendor marketplace for modern living</h1>
+        <p>Shop from independent sellers across Zambia — track orders from pending to delivered and leave reviews after receipt.</p>
+      </section>
+
+      <div id="shop-alert"></div>
+
+      <section class="filters" aria-label="Product filters">
+        <input type="search" id="search-input" placeholder="Search products…" autocomplete="off" />
+        <select id="category-filter" aria-label="Category">
+          <option value="all">All categories</option>
+        </select>
+        <button type="button" class="btn btn-primary" id="search-btn">Search</button>
+      </section>
+
+      <section id="product-grid" class="product-grid" aria-live="polite">
+        <p class="loading-state">Loading products…</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> ZedSitolo. Built with Node.js, Express, and SQLite.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/shop.js"></script>
+  </body>
+</html>
